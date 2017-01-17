@@ -30,26 +30,26 @@ public class hextoBinary {
 		Scanner s = new Scanner(System.in);
 
 		try{
-				System.out.println("Enter Hex Number :- ");
-				hexDecNum = s.nextLine();
+			System.out.println("Enter Hex Number :- ");
+			hexDecNum = s.nextLine();
 
-				decNum = hextobinary(hexDecNum);
+			decNum = hextobinary(hexDecNum);
 
-				while(decNum!=0) {
-					binaryNum[i++] = decNum%2;
-					decNum = decNum/2;
-				}
-
-				System.out.print("Equivalent Binary Number is :- \n");
-				for(j=i-1; j>0; j--) {
-					System.out.print(binaryNum[j]);
-				}
-
-				System.out.println("");
-
-			}catch(Exception e) {
-				System.out.println("Invalid Number !");
+			while(decNum!=0) {
+				binaryNum[i++] = decNum%2;
+				decNum = decNum/2;
 			}
+
+			System.out.print("Equivalent Binary Number is :- \n");
+			for(j=i-1; j>0; j--) {
+				System.out.print(binaryNum[j]);
+			}
+
+			System.out.println("");
+
+		}catch(Exception e) {
+			System.out.println("Invalid Number !");
+		}
 
 		
 	}
