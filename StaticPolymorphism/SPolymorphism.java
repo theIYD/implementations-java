@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class DPolymorphism {
+public class SPolymorphism {
 
 	public void method(int a) {
 		System.out.println("Hi !");
@@ -16,7 +16,7 @@ public class DPolymorphism {
 
 	public static void main(String[] args) {
 
-		DPolymorphism poly = new DPolymorphism();
+		SPolymorphism poly = new SPolymorphism();
 		poly.method(50);
 		poly.method(23,41);
 		poly.method(1.4f);
