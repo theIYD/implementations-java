@@ -46,7 +46,7 @@ public class Calculator {
 
 			switch(selectOperator) {
 
-				case 1: //additionOperation();
+				case 1: additionOperation();
 						validEntry = true;
 						break;
 
@@ -71,7 +71,7 @@ public class Calculator {
 
 	}
 
-	//Acept the 2 operands
+	//Accept the 2 operands
 	public void acceptOperands() {
 
 		System.out.print("Enter 1st operand : ");
@@ -79,6 +79,14 @@ public class Calculator {
 
 		System.out.print("Enter 2nd operand : ");
 		OPERAND_2 = sc.nextDouble();
+	}
+
+	//Addition Method
+	public void additionOperation() {
+
+		acceptOperands();
+		double total = OPERAND_1 + OPERAND_2;
+		System.out.println("Total is: "+total);
 	}
 
 }
