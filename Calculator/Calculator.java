@@ -7,6 +7,8 @@ public class Calculator {
 
 	public double OPERAND_1 = 0;
 	public double OPERAND_2 = 0;
+	public static final String AGREE = "yes";
+	public static final String DISAGREE = "no";
 
 	//We use Scanner class
 	Scanner sc = new Scanner(System.in);
@@ -68,7 +70,6 @@ public class Calculator {
 			}
 		}while(validEntry==false);
 
-
 	}
 
 	//Accept the 2 operands
@@ -87,6 +88,28 @@ public class Calculator {
 		acceptOperands();
 		double total = OPERAND_1 + OPERAND_2;
 		System.out.println("Total is: "+total);
+
+		System.out.println();
+		goBackToStart();
 	}
 
+	//It's called when the user wants to go back to menu
+	public void goBackToStart() {
+
+		System.out.println("Want to go to menu ?");
+		String goBack = sc.next();
+
+		if(goBack!=null) {
+
+			if(goBack.equalsIgnoreCase(AGREE)) {
+				chooseOperations();
+				System.out.println();
+			}
+			else if(goBack.equalsIgnoreCase(DISAGREE)) {
+				System.out.println();
+				System.out.println("Thanks alot for using the calculator !");
+				System.exit(0);
+			}
+		}
+	}
 }
