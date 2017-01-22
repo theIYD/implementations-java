@@ -5,6 +5,9 @@ import java.util.*;
 //Class starts
 public class Calculator {
 
+	public double OPERAND_1 = 0;
+	public double OPERAND_2 = 0;
+
 	//We use Scanner class
 	Scanner sc = new Scanner(System.in);
 
@@ -66,6 +69,16 @@ public class Calculator {
 		}while(validEntry==false);
 
 
+	}
+
+	//Acept the 2 operands
+	public void acceptOperands() {
+
+		System.out.print("Enter 1st operand : ");
+		OPERAND_1 = sc.nextDouble();
+
+		System.out.print("Enter 2nd operand : ");
+		OPERAND_2 = sc.nextDouble();
 	}
 
 }
