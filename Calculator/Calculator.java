@@ -7,6 +7,7 @@ public class Calculator {
 
 	public double OPERAND_1 = 0;
 	public double OPERAND_2 = 0;
+	public double TOTAL = 0;
 	public static final String AGREE = "yes";
 	public static final String DISAGREE = "no";
 
@@ -52,7 +53,7 @@ public class Calculator {
 						validEntry = true;
 						break;
 
-				case 2: //subtractionOperation();
+				case 2: subtractionOperation();
 						validEntry = true;
 						break;
 
@@ -86,8 +87,8 @@ public class Calculator {
 	public void additionOperation() {
 
 		acceptOperands();
-		double total = OPERAND_1 + OPERAND_2;
-		System.out.println("Total is: "+total);
+		TOTAL = OPERAND_1 + OPERAND_2;
+		System.out.println("Total is: "+TOTAL);
 
 		System.out.println();
 		goBackToStart();
@@ -111,5 +112,20 @@ public class Calculator {
 				System.exit(0);
 			}
 		}
+	}
+
+	public void subtractionOperation() {
+		acceptOperands();
+
+		if(OPERAND_1 < OPERAND_2) {
+			TOTAL = OPERAND_2 - OPERAND_1;	
+		}
+
+		else {
+			TOTAL = OPERAND_1 - OPERAND_2;
+		}
+
+		System.out.println("Total is :- "+TOTAL);
+		goBackToStart();
 	}
 }
