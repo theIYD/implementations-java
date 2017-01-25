@@ -61,7 +61,7 @@ public class Calculator {
 						validEntry = true;
 						break;
 
-				case 4: //divisionOperation();
+				case 4: divisionOperation();
 						validEntry = true;
 						break;
 
@@ -97,6 +97,7 @@ public class Calculator {
 	//It's called when the user wants to go back to menu
 	public void goBackToStart() {
 
+		System.out.println();
 		System.out.println("Want to go to menu ?");
 		String goBack = sc.next();
 
@@ -114,18 +115,27 @@ public class Calculator {
 		}
 	}
 
+	//Subtraction Method
 	public void subtractionOperation() {
 		acceptOperands();
 
 		if(OPERAND_1 < OPERAND_2) {
 			TOTAL = OPERAND_2 - OPERAND_1;	
 		}
-
 		else {
 			TOTAL = OPERAND_1 - OPERAND_2;
 		}
 
 		System.out.println("Total is :- "+TOTAL);
+		goBackToStart();
+	}
+
+	//Division Method
+	public void divisionOperation() {
+		acceptOperands();
+
+		TOTAL = OPERAND_1 / OPERAND_2;
+		System.out.println("Total is: "+TOTAL);
 		goBackToStart();
 	}
 }
