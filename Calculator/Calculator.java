@@ -3,6 +3,15 @@
 import java.io.*;
 import java.util.*;
 
+/* 
+	Author: Idrees Dargahwala
+
+	Calculator is a terminal based Java project which operates on 
+	the operands entered by the user and gives the user to choose an operation.
+	The project is currently work in progress [WIP]. 
+
+	*/
+
 //Class starts
 public class Calculator {
 
@@ -132,8 +141,6 @@ public class Calculator {
 			}
 
 		}while(FLAG==true);
-
-		
 	}
 
 	//Subtraction Method
@@ -169,5 +176,5 @@ public class Calculator {
 		System.out.println("Total is: "+TOTAL);
 		goBackToStart();
 	}
-	
+
 }//Class ends
