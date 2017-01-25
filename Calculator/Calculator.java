@@ -10,6 +10,7 @@ public class Calculator {
 	public double TOTAL = 0;
 	public static final String AGREE = "yes";
 	public static final String DISAGREE = "no";
+	public static boolean FLAG = false;
 
 	//We use Scanner class
 	Scanner sc = new Scanner(System.in);
@@ -98,21 +99,37 @@ public class Calculator {
 	public void goBackToStart() {
 
 		System.out.println();
-		System.out.println("Want to go to menu ?");
+		System.out.println("Want to go to menu ? (YES/NO)");
 		String goBack = sc.next();
 
-		if(goBack!=null) {
+		//Check if the user enters (YES/NO)
+		do { 
 
-			if(goBack.equalsIgnoreCase(AGREE)) {
-				chooseOperations();
-				System.out.println();
+			if(goBack!=null) {
+
+				if(goBack.equalsIgnoreCase(AGREE)) {
+						chooseOperations();
+						System.out.println();
+						FLAG = true;
+
+				}
+				else if(goBack.equalsIgnoreCase(DISAGREE)) {
+						System.out.println();
+						System.out.println("Thanks alot for using the calculator !");
+						System.exit(0);
+						FLAG = true;
+
+				}else {
+					System.out.println("Something's wrong !");
+					System.out.println();
+					FLAG = false;
+				}
+
 			}
-			else if(goBack.equalsIgnoreCase(DISAGREE)) {
-				System.out.println();
-				System.out.println("Thanks alot for using the calculator !");
-				System.exit(0);
-			}
-		}
+
+		}while(FLAG==true);
+
+		
 	}
 
 	//Subtraction Method
