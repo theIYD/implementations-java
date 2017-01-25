@@ -41,7 +41,7 @@ public class Calculator {
 		boolean validEntry = false;
 
 		do{
-			System.out.print(" 1. Addition\n 2.Subtraction\n 3. Multiplication\n 4.Division\n");
+			System.out.print(" 1. Addition\n 2. Subtraction\n 3. Multiplication\n 4. Division\n");
 			System.out.println();
 			System.out.println("Which operation you want to choose ?");
 
@@ -57,7 +57,7 @@ public class Calculator {
 						validEntry = true;
 						break;
 
-				case 3: //multiplicationOperation();
+				case 3: multiplicationOperation();
 						validEntry = true;
 						break;
 
@@ -127,6 +127,15 @@ public class Calculator {
 		}
 
 		System.out.println("Total is :- "+TOTAL);
+		goBackToStart();
+	}
+
+	//Multiplication Method
+	public void multiplicationOperation() {
+		acceptOperands();
+
+		TOTAL = OPERAND_1 * OPERAND_2;
+		System.out.println("Total is :"+TOTAL);
 		goBackToStart();
 	}
 
