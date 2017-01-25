@@ -53,7 +53,7 @@ public class Calculator {
 		boolean validEntry = false;
 
 		do{
-			System.out.print(" 1. Addition\n 2. Subtraction\n 3. Multiplication\n 4. Division\n");
+			System.out.print(" 1. Addition\n 2. Subtraction\n 3. Multiplication\n 4. Division\n 5. Square\n");
 			System.out.println();
 			System.out.println("Which operation you want to choose ?");
 
@@ -75,6 +75,10 @@ public class Calculator {
 						break;
 
 				case 4: divisionOperation();
+						validEntry = true;
+						break;
+
+				case 5: squareOperation();
 						validEntry = true;
 						break;
 
@@ -174,6 +178,17 @@ public class Calculator {
 
 		TOTAL = OPERAND_1 / OPERAND_2;
 		System.out.println("Total is: "+TOTAL);
+		goBackToStart();
+	}
+
+	//Square Method
+	public void squareOperation() {
+
+		System.out.print("Enter a number :- ");
+		double enteredNumber = sc.nextDouble();
+
+		TOTAL = enteredNumber * enteredNumber;
+		System.out.println("Squared number is "+TOTAL);
 		goBackToStart();
 	}
 
