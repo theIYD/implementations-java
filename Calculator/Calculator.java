@@ -1,10 +1,12 @@
 
+//Import libraries
 import java.io.*;
 import java.util.*;
 
 //Class starts
 public class Calculator {
 
+	//Global Variables
 	public double OPERAND_1 = 0;
 	public double OPERAND_2 = 0;
 	public double TOTAL = 0;
@@ -48,6 +50,7 @@ public class Calculator {
 
 			int selectOperator = sc.nextInt();
 
+			//Use switch-case.
 			switch(selectOperator) {
 
 				case 1: additionOperation();
@@ -82,6 +85,7 @@ public class Calculator {
 
 		System.out.print("Enter 2nd operand : ");
 		OPERAND_2 = sc.nextDouble();
+
 	}
 
 	//Addition Method
@@ -136,6 +140,7 @@ public class Calculator {
 	public void subtractionOperation() {
 		acceptOperands();
 
+		//Check which operand is greater.
 		if(OPERAND_1 < OPERAND_2) {
 			TOTAL = OPERAND_2 - OPERAND_1;	
 		}
@@ -164,4 +169,5 @@ public class Calculator {
 		System.out.println("Total is: "+TOTAL);
 		goBackToStart();
 	}
-}
+	
+}//Class ends
