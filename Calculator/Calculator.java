@@ -127,11 +127,13 @@ public class Calculator {
 	public void goBackToStart() {
 
 		System.out.println();
-		System.out.println("Want to go to menu ? (YES/NO)");
-		String goBack = sc.next();
-
-		//Check if the user enters (YES/NO)
 		do { 
+
+			System.out.println("Want to go to menu ? (YES/NO)");
+			String goBack = sc.next();
+
+			//Check if the user enters (YES/NO)
+		
 
 			if(goBack!=null) {
 
@@ -155,7 +157,7 @@ public class Calculator {
 
 			}
 
-		}while(FLAG==true);
+		}while(FLAG==false);
 	}
 
 	//Subtraction Method
