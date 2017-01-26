@@ -54,7 +54,7 @@ public class Calculator {
 		boolean validEntry = false;
 
 		do{
-			System.out.print(" 1. Addition\n 2. Subtraction\n 3. Multiplication\n 4. Division\n 5. Square\n 6. Square Root\n");
+			System.out.print(" 1. Addition\n 2. Subtraction\n 3. Multiplication\n 4. Division\n 5. Square\n 6. Square Root\n 7. Log\n");
 
 			System.out.println();
 			System.out.println("Which operation you want to choose ?");
@@ -87,6 +87,11 @@ public class Calculator {
 				case 6: squareRootOperation();
 						validEntry = true;
 						break;
+
+				case 7: logOperation();
+						validEntry = true;
+						break;
+
 
 				default: System.out.println("Try again !");
 						 validEntry = false;
@@ -205,6 +210,16 @@ public class Calculator {
 
 		TOTAL = Math.sqrt(ENTER_NUMBER);
 		System.out.println("Sqaure root of entered number is :- "+TOTAL);
+		goBackToStart();
+	}
+
+	//Log method
+	public void logOperation() {
+		System.out.print("Enter a number :- ");
+		ENTER_NUMBER = sc.nextDouble();
+
+		TOTAL = Math.log(ENTER_NUMBER);
+		System.out.println("Log of "+ENTER_NUMBER+ " is :- "+TOTAL);
 		goBackToStart();
 	}
 
