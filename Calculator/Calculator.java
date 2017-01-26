@@ -19,6 +19,7 @@ public class Calculator {
 	public double OPERAND_1 = 0;
 	public double OPERAND_2 = 0;
 	public double TOTAL = 0;
+	public double ENTER_NUMBER = 0;
 	public static final String AGREE = "yes";
 	public static final String DISAGREE = "no";
 	public static boolean FLAG = false;
@@ -53,7 +54,8 @@ public class Calculator {
 		boolean validEntry = false;
 
 		do{
-			System.out.print(" 1. Addition\n 2. Subtraction\n 3. Multiplication\n 4. Division\n 5. Square\n");
+			System.out.print(" 1. Addition\n 2. Subtraction\n 3. Multiplication\n 4. Division\n 5. Square\n 6. Square Root\n");
+
 			System.out.println();
 			System.out.println("Which operation you want to choose ?");
 
@@ -79,6 +81,10 @@ public class Calculator {
 						break;
 
 				case 5: squareOperation();
+						validEntry = true;
+						break;
+
+				case 6: squareRootOperation();
 						validEntry = true;
 						break;
 
@@ -185,10 +191,20 @@ public class Calculator {
 	public void squareOperation() {
 
 		System.out.print("Enter a number :- ");
-		double enteredNumber = sc.nextDouble();
+		ENTER_NUMBER = sc.nextDouble();
 
-		TOTAL = enteredNumber * enteredNumber;
+		TOTAL = ENTER_NUMBER * ENTER_NUMBER;
 		System.out.println("Squared number is "+TOTAL);
+		goBackToStart();
+	}
+
+	//Square-root method
+	public void squareRootOperation() {
+		System.out.print("Enter a number :- ");
+		ENTER_NUMBER = sc.nextDouble();
+
+		TOTAL = Math.sqrt(ENTER_NUMBER);
+		System.out.println("Sqaure root of entered number is :- "+TOTAL);
 		goBackToStart();
 	}
 
