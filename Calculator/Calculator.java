@@ -115,6 +115,11 @@ public class Calculator {
 
 	}
 
+	public void acceptANumber() {
+		System.out.print("Enter a number :- ");
+		ENTER_NUMBER = sc.nextDouble();
+	}
+
 	//Addition Method
 	public void additionOperation() {
 
@@ -200,8 +205,7 @@ public class Calculator {
 	//Square Method
 	public void squareOperation() {
 
-		System.out.print("Enter a number :- ");
-		ENTER_NUMBER = sc.nextDouble();
+		acceptANumber();
 
 		TOTAL = ENTER_NUMBER * ENTER_NUMBER;
 		System.out.println("Squared number is "+TOTAL);
@@ -210,8 +214,7 @@ public class Calculator {
 
 	//Square-root method
 	public void squareRootOperation() {
-		System.out.print("Enter a number :- ");
-		ENTER_NUMBER = sc.nextDouble();
+		acceptANumber();
 
 		TOTAL = Math.sqrt(ENTER_NUMBER);
 		System.out.println("Sqaure root of entered number is :- "+TOTAL);
@@ -220,8 +223,7 @@ public class Calculator {
 
 	//Log method
 	public void logOperation() {
-		System.out.print("Enter a number :- ");
-		ENTER_NUMBER = sc.nextDouble();
+		acceptANumber();
 
 		TOTAL = Math.log(ENTER_NUMBER);
 		System.out.println("Log of "+ENTER_NUMBER+ " is :- "+TOTAL);
@@ -230,8 +232,7 @@ public class Calculator {
 
 	//Cube-root method
 	public void cuberootOperation() {
-		System.out.print("Enter a number :- ");
-		ENTER_NUMBER = sc.nextDouble();
+		acceptANumber();
 
 		TOTAL = Math.cbrt(ENTER_NUMBER);
 		System.out.println("Cube Root of "+ENTER_NUMBER+ " is :- "+TOTAL);
