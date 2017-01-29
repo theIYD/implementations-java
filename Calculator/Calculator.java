@@ -54,7 +54,7 @@ public class Calculator {
 		boolean validEntry = false;
 
 		do{
-			System.out.print(" 1. Addition\n 2. Subtraction\n 3. Multiplication\n 4. Division\n 5. Square\n 6. Square Root\n 7. Log\n");
+			System.out.print(" 1. Addition\n 2. Subtraction\n 3. Multiplication\n 4. Division\n 5. Square\n 6. Square Root\n 7. Log\n 8. Cube-root\n");
 
 			System.out.println();
 			System.out.println("Which operation you want to choose ?");
@@ -92,6 +92,9 @@ public class Calculator {
 						validEntry = true;
 						break;
 
+				case 8: cuberootOperation();
+						validEntry = true;
+						break;	
 
 				default: System.out.println("Try again !");
 						 validEntry = false;
@@ -222,6 +225,16 @@ public class Calculator {
 
 		TOTAL = Math.log(ENTER_NUMBER);
 		System.out.println("Log of "+ENTER_NUMBER+ " is :- "+TOTAL);
+		goBackToStart();
+	}
+
+	//Cube-root method
+	public void cuberootOperation() {
+		System.out.print("Enter a number :- ");
+		ENTER_NUMBER = sc.nextDouble();
+
+		TOTAL = Math.cbrt(ENTER_NUMBER);
+		System.out.println("Cube Root of "+ENTER_NUMBER+ " is :- "+TOTAL);
 		goBackToStart();
 	}
 
