@@ -280,7 +280,7 @@ public class Calculator {
 
 		double radians = Math.toRadians(acceptInDegrees);
 
-		if(radians==90) {
+		if(acceptInDegrees==90) {
 			System.out.println("Tangent of "+acceptInDegrees+" is not defined");
 		}
 		else{
