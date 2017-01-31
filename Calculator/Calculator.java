@@ -54,7 +54,7 @@ public class Calculator {
 		boolean validEntry = false;
 
 		do{
-			System.out.print(" 1. Addition\n 2. Subtraction\n 3. Multiplication\n 4. Division\n 5. Square\n 6. Square Root\n 7. Log\n 8. Cube-root\n");
+			System.out.print(" 1. Addition\n 2. Subtraction\n 3. Multiplication\n 4. Division\n 5. Square\n 6. Square Root\n 7. Log\n 8. Cube-root\n 9. Sine\n 10. Cosine\n 11. Tangent\n");
 
 			System.out.println();
 			System.out.println("Which operation you want to choose ?");
@@ -95,6 +95,18 @@ public class Calculator {
 				case 8: cuberootOperation();
 						validEntry = true;
 						break;	
+
+				case 9: sineOperation();
+						validEntry = true;
+						break;	
+
+				case 10: cosineOperation();
+						validEntry = true;
+						break;
+
+				case 11: tangentOperation();
+						validEntry = true;
+						break;
 
 				default: System.out.println("Try again !");
 						 validEntry = false;
@@ -239,4 +251,43 @@ public class Calculator {
 		goBackToStart();
 	}
 
+	//Sine method
+	public void sineOperation() {
+		System.out.print("Enter angle in degrees :-");
+		double acceptInDegrees = sc.nextDouble();
+
+		double radians = Math.toRadians(acceptInDegrees);
+		TOTAL = Math.sin(radians);
+
+		System.out.println("Sine of "+acceptInDegrees+" is :- "+TOTAL);
+	}
+
+	//Cosine method
+	public void cosineOperation() {
+		System.out.print("Enter angle in degrees :-");
+		double acceptInDegrees = sc.nextDouble();
+
+		double radians = Math.toRadians(acceptInDegrees);
+		TOTAL = Math.cos(radians);
+
+		System.out.println("Cosine of "+acceptInDegrees+" is :- "+TOTAL);
+	}
+
+	//Tangent method
+	public void tangentOperation() {
+		System.out.print("Enter angle in degrees :-");
+		double acceptInDegrees = sc.nextDouble();
+
+		double radians = Math.toRadians(acceptInDegrees);
+
+		if(radians==90) {
+			System.out.println("Tangent of "+acceptInDegrees+" is not defined");
+		}
+		else{
+
+			TOTAL = Math.tan(radians);
+			System.out.println("Tangent of "+acceptInDegrees+" is :- "+TOTAL);
+		}
+		
+	}
 }//Class ends
